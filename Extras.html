@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Bite of 87 Image</title>
   <style>
     body {
+      margin: 0;
       background-color: #999999;
-      text-align: center;
       font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    /* Header bar */
+    header {
+      background-color: #333;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+      font-size: 2.2em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #00ffcc;  /* highlight on hover */
+    }
+    /* Content */
+    .content {
+      padding: 40px;
     }
     embed {
       display: block;
@@ -15,7 +44,18 @@
 </head>
 <body>
 
-  <embed src="Bite_of_87.png" type="image/png" width="1440" height="1920">
+  <header>
+    <h1>Bea Derby</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="Extras.html">Extras</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <embed src="Bite_of_87.png" type="image/png" width="1440" height="1920">
+  </div>
 
 </body>
 </html>
