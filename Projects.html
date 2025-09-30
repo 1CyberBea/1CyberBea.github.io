@@ -8,6 +8,7 @@
       background-color: #5E5E5E;
       font-family: Helvetica, Arial, sans-serif;
     }
+
     /* Header bar */
     header {
       background-color: #574373;     /* dark purple header */
@@ -31,10 +32,59 @@
     nav a:hover {
       color: #e8bd3c;             /* highlight on hover */
     }
+
     /* Page content */
     .content {
       padding: 40px;
       text-align: center;
+    }
+
+    /* Grid wrapper for project cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* strictly 3 per row */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Card container */
+    .container {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Make images responsive */
+    .container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* Button overlay on image */
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .container .btn:hover {
+      background-color: black;
+    }
+
+    /* Section headers */
+    h2, h3 {
+      color: black;
     }
   </style>
 </head>
@@ -51,14 +101,49 @@
       <a href="Extras.html">Extras</a>
     </nav>
   </header>
-
+  
   <div class="content">
-    <h2 style="color: black;">Projects page</h2>
-    <p></p>
-    <h3 style="color: black;">Class Projects</h3>
-    <p></p>
-    <h3 style="color: black;">Personal Projects</h3>
-    <p> </p>
+    <h2>Projects Page</h2>
+
+    <h3>General Projects</h3>
+    <div class="card-grid">
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+    </div>
+
+    <h3>Class Projects</h3>
+    <div class="card-grid">
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+    </div>
+
+    <h3>Personal Projects</h3>
+    <div class="card-grid">
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+      <div class="container"> 
+        <img src="IMAGEHERE" alt="IMAGE"> 
+        <button class="btn">Button</button>
+      </div>
+    </div>
   </div>
 
 </body>
