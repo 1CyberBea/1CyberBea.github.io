@@ -42,8 +42,9 @@
     /* Grid wrapper for project cards */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* strictly 3 per row */
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 30px;
+      justify-content: center;   /* center the grid */
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -51,13 +52,15 @@
     /* Card container */
     .container {
       position: relative;
-      width: 100%;
+      width: 250px;       /* fixed card width */
+      margin: 0 auto;     /* keep centered in each grid cell */
     }
 
-    /* Make images responsive */
+    /* Make images uniform size */
     .container img {
       width: 100%;
-      height: auto;
+      height: 180px;      /* fixed height for consistency */
+      object-fit: cover;  /* crop without distortion */
       display: block;
       border-radius: 8px;
     }
@@ -76,6 +79,7 @@
       border: none;
       cursor: pointer;
       border-radius: 5px;
+      text-decoration: none;
     }
 
     .container .btn:hover {
@@ -85,6 +89,22 @@
     /* Section headers */
     h2, h3 {
       color: black;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+      }
+    }
+
+    @media (max-width: 500px) {
+      .card-grid {
+        grid-template-columns: 1fr; /* 1 per row */
+      }
+      .container {
+        width: 90%; /* let it expand a bit on small screens */
+      }
     }
   </style>
 </head>
@@ -115,31 +135,30 @@
         <img src="Rust_programming_language_black_logo.svg.png" alt="Rust Logo"> 
         <button class="btn">RSA Public Key</button>
       </div>
-        <div class="container"> 
-          <img src="python_logo.png" alt="Python Logo"> 
-          <button class="btn">Sales Database Queries</button>
+      <div class="container"> 
+        <img src="python_logo.png" alt="Python Logo"> 
+        <button class="btn">Sales Database Queries</button>
       </div>
-        <div class="container"> 
-          <img src="C_Logo.png" alt="C Logo"> 
-          <button class="btn">Parity Checksum Analysis</button>
+      <div class="container"> 
+        <img src="C_Logo.png" alt="C Logo"> 
+        <button class="btn">Parity Checksum Analysis</button>
       </div>
-        <div class="container"> 
-          <img src="C_Logo.png" alt="C Logo"> 
-          <button class="btn">Password Strength Meter</button>
+      <div class="container"> 
+        <img src="C_Logo.png" alt="C Logo"> 
+        <button class="btn">Password Strength Meter</button>
       </div>
-        <div class="container"> 
-          <img src="C_Logo.png" alt="C Logo"> 
-          <button class="btn">FILL THIS</button>
+      <div class="container"> 
+        <img src="C_Logo.png" alt="C Logo"> 
+        <button class="btn">FILL THIS</button>
       </div>
     </div>
 
-  <h2>Personal Projects</h2>
-  <div class="card-grid">
-    <div class="container"> 
-      <img src="laptop.jpeg" alt="Laptop"> 
-      <a href="projects/Website.html" class="btn">This Website</a>
-    </div>
-  </div>
+    <h2>Personal Projects</h2>
+    <div class="card-grid">
+      <div class="container"> 
+        <img src="laptop.jpeg" alt="Laptop"> 
+        <a href="projects/Website.html" class="btn">This Website</a>
+      </div>
       <div class="container"> 
         <img src="codedrip.jpg" alt="code"> 
         <button class="btn">TBD</button>
