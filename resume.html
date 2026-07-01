@@ -3,21 +3,31 @@
 <head>
   <title>Resume</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background-color: #5E5E5E;
       font-family: Helvetica, Arial, sans-serif;
       text-align: center;
+      /* Dark purple at top fading to lighter purple/gray as you scroll */
+      background: linear-gradient(180deg, #2e2340 0%, #574373 35%, #7c6a99 70%, #9c92b0 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
+
     header {
-      background-color: #574373;
+      background-color: rgba(46, 35, 64, 0.85);
       padding: 20px 0;
       text-align: center;
+      backdrop-filter: blur(4px);
     }
     header h1 {
       color: white;
       margin: 0;
       font-size: 2.2em;
+      letter-spacing: 1px;
     }
     nav {
       margin-top: 10px;
@@ -27,24 +37,27 @@
       text-decoration: none;
       margin: 0 20px;
       font-size: 1.2em;
+      transition: color 0.2s ease;
     }
     nav a:hover {
       color: #e8bd3c;
     }
+
     .content {
-      padding: 40px;
+      padding: 50px 40px;
     }
 
-    /* frame pdf*/
+    /* frame pdf */
     .resume-wrapper {
       max-width: 900px;
       margin: 0 auto;
-      background: linear-gradient(180deg, #6b5590, #574373);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       padding: 24px;
       border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(2px);
     }
-
     .resume-wrapper embed {
       display: block;
       width: 100%;
@@ -60,6 +73,7 @@
       margin-top: 16px;
       font-size: 1.1em;
       font-weight: normal;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     .download-link {
@@ -90,7 +104,6 @@
       <a href="Extras.html">Extras</a>
     </nav>
   </header>
-
   <div class="content">
     <div class="resume-wrapper">
       <embed src="DerbyBrendan_Resume.pdf" type="application/pdf">
